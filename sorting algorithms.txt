@@ -1,0 +1,76 @@
+Sorting algorithms:
+1.Slection sort:
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[] arr = {8,3,2,7,9,1,4};
+		for(int i=0;i<arr.length;i++){
+		    int smallest = i;
+		    for(int j=i+1;j<arr.length;j++){
+		        if(arr[j]<arr[smallest]){
+		            smallest = j;
+		        }
+		        
+		    }
+		    int temp = arr[smallest];
+		        arr[smallest] = arr[i];
+		        arr[i] = temp;
+		}
+		System.out.println();
+		for(int val:arr){
+		    System.out.print(val+" ");
+		}
+	}
+}
+O(N*N)
+
+2. Insertion Sort :
+//Insertion sort
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[] arr = {8,3,2,7,9,1,4};
+		for(int i=0;i<arr.length;i++){
+		    int index = i;
+		    while(index>0&&arr[index-1]>=arr[index]){
+		        int temp = arr[index-1];
+		        arr[index-1] = arr[index];
+		        arr[index] = temp;
+		        index--;
+		    }
+		}
+		System.out.println();
+		for(int val:arr){
+		    System.out.print(val+" ");
+		}
+	
+	}
+}
+
+3.Bubble Sort:
+//Bubble sort sort
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int[] arr = {8,3,2,7,9,1,4};
+		for(int i=0;i<arr.length;i++){
+		    for(int j=1;j<arr.length;j++){
+		        if(arr[j-1]>arr[j]){
+		        int temp = arr[j];
+		        arr[j] = arr[j-1];
+		        arr[j-1] = temp;
+		        }
+		    }
+		}
+		System.out.println();
+		for(int val:arr){
+		    System.out.print(val+" ");
+		}
+	}
+}
